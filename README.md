@@ -167,4 +167,5 @@ The final signal is shown as:
 This dashboard is for educational and research purposes only. It does not provide financial advice, investment recommendations, or guaranteed predictions.
 
 Always do your own research or consult a qualified financial advisor before making investment decisions.
-```
+
+```Happy Coding!```
