@@ -1,171 +1,327 @@
-# AI-Assisted Stock Research & Backtesting Dashboard
+# Quantitative Equity Research, Screening & Backtesting Platform
 
-A Streamlit-based stock research dashboard for Indian equities. The app helps users analyze stocks using technical filters such as trend, volume, support/resistance, relative strength, RSI momentum, and trend structure.
+A modular Python-based quantitative research platform for Indian equities that integrates technical analysis, fundamental screening, factor-based stock ranking, systematic strategy backtesting, and risk-adjusted performance evaluation into a unified decision-support framework.
 
-It supports single-stock analysis as well as Nifty 50, Nifty 100, and Nifty 200 scanning.
+The platform is designed to emulate a professional equity research workflow by combining trend-following signals, momentum analytics, relative strength ranking, volume confirmation, market regime analysis, support/resistance detection, and fundamental quality assessment.
 
-> This project is for education and research only. It is not financial advice.
+Unlike traditional stock screeners that rely on isolated indicators, the system uses a multi-factor scoring engine and decision framework to identify high-conviction opportunities across Nifty 50, Nifty 100, and Nifty 200 constituents.
 
-## Features
 
-- Search and analyze individual NSE stocks
-- 5-year and 10-year technical analysis sections
-- Nifty 50 scanner
-- Nifty 100 scanner
-- Nifty 200 scanner
-- Six-tier technical scoring system
-- Price chart with 50 DMA and 200 DMA
-- Support and resistance levels
-- RSI momentum analysis
-- Volume comparison against 20-day average volume
-- Relative strength comparison against Nifty
-- Timeframe-based view for 1 month, 3 months, 6 months, and 1 year
-- Light, dark, and beige themes
-- Download scanner results as CSV
 
-## Technical Filters Used
+## Core Objectives
 
-### 1. Trend
+* Identify structurally strong stocks through quantitative screening
+* Detect market leaders using Relative Strength analysis
+* Evaluate trend persistence and momentum quality
+* Compare stocks against benchmark index performance
+* Backtest systematic trading strategies under realistic assumptions
+* Analyze risk-adjusted returns instead of absolute returns alone
+* Create a repeatable and data-driven equity research process
 
-Checks whether the stock is trading above or below the 200-day moving average.
 
-- Price above 200 DMA: long-term strength
-- Price below 200 DMA: long-term weakness
 
-Also compares the 50 DMA with the 200 DMA.
+## Platform Capabilities
 
-- 50 DMA above 200 DMA: bullish trend confirmation
-- 50 DMA below 200 DMA: bearish trend confirmation
+### 1. Quantitative Equity Screening
 
-### 2. Volume
+The platform scans and ranks stocks across:
 
-Compares current volume with the 20-day average volume.
+* Nifty 50
+* Nifty 100
+* Nifty 200
 
-A price move with higher-than-average volume is considered stronger than a move with weak volume.
+Each stock is evaluated through a multi-factor framework incorporating:
 
-### 3. Support and Resistance
+### Trend Factors
 
-Calculates recent support and resistance using recent price highs and lows.
+* Price vs 200 DMA
+* 50 DMA vs 200 DMA
+* Long-Term Trend Confirmation
+* Golden Cross / Death Cross Detection
 
-The app checks whether the stock is close to support, near resistance, or breaking above resistance.
+### Momentum Factors
 
-### 4. Relative Strength
+* RSI Momentum
+* Momentum Persistence
+* Overbought / Oversold Conditions
 
-Compares the stock’s return with Nifty’s return over the selected period.
+### Relative Strength Factors
 
-If the stock outperforms Nifty, it is treated as stronger.
+* Relative Strength vs Nifty
+* Benchmark Outperformance
+* Leadership Identification
 
-### 5. Momentum
+### Volume Factors
 
-Uses RSI to judge momentum.
+* Current Volume vs 20-Day Average Volume
+* Volume Expansion
+* Breakout Confirmation
+* Participation Strength
 
-- RSI above 60: strong momentum
-- RSI between 45 and 60: neutral momentum
-- RSI below 45: weak momentum
+### Market Structure Factors
 
-### 6. Trend Structure
+* Higher Highs
+* Higher Lows
+* Lower Highs
+* Lower Lows
+* Trend Continuation Detection
 
-Checks whether the stock is forming:
+### Price Action Factors
 
-- Higher highs and higher lows: bullish structure
-- Lower highs and lower lows: bearish structure
-- Mixed structure: unclear trend
+* Support Zones
+* Resistance Zones
+* Breakout Detection
+* Pullback Opportunities
+
+
+
+### 2. Fundamental Analysis Engine
+
+The platform incorporates company-level financial metrics to complement technical signals.
+
+Key metrics include:
+
+### Valuation Metrics
+
+* Price-to-Earnings Ratio (P/E)
+* Forward P/E
+* Price-to-Book Ratio (P/B)
+* Enterprise Value
+
+### Profitability Metrics
+
+* Return on Equity (ROE)
+* Return on Assets (ROA)
+* Profit Margins
+* Operating Margins
+
+### Growth Metrics
+
+* Revenue Growth
+* Earnings Growth
+* EPS Growth
+
+### Financial Health Metrics
+
+* Debt-to-Equity Ratio
+* Current Ratio
+* Cash Position
+* Free Cash Flow Indicators
+
+This allows the system to avoid purely price-driven decision making.
+
+
+
+### 3. Multi-Factor Decision Engine
+
+The decision engine aggregates:
+
+* Technical Signals
+* Fundamental Signals
+* Relative Strength Metrics
+* Momentum Factors
+* Trend Quality Indicators
+
+into a unified stock evaluation framework.
+
+Each stock receives:
+
+* Quantitative Score
+* Technical Rating
+* Fundamental Assessment
+* Recommendation Classification
+
+Example outputs:
+
+* Strong Bullish
+* Bullish
+* Watchlist
+* Neutral
+* Weak
+* Avoid
+
+
+
+### 4. Strategy Research & Backtesting
+
+The platform includes a systematic backtesting engine for evaluating rule-based investment strategies.
+
+### Current Strategy
+
+Trend-Following Long-Only System:
+
+* SMA 20 / SMA 50 Crossover
+* 200 DMA Regime Filter
+* Stop-Loss Protection
+* Transaction Cost Modeling
+* Event-Driven Signal Processing
+* Daily Mark-to-Market Portfolio Valuation
+
+### Trade Management
+
+* Entry Signal Generation
+* Exit Signal Generation
+* Stop-Loss Exits
+* Trade Attribution
+* PnL Tracking
+
+
+
+### 5. Risk Analytics & Performance Evaluation
+
+The platform evaluates strategies using both absolute and risk-adjusted metrics.
+
+### Return Metrics
+
+* Total Return
+* CAGR
+* Annualized Return
+* Benchmark Outperformance
+
+### Risk Metrics
+
+* Maximum Drawdown
+* Drawdown Duration
+* Portfolio Volatility
+
+### Trade Metrics
+
+* Win Rate
+* Average Win
+* Average Loss
+* Expectancy
+* Profitability Distribution
+
+### Risk-Adjusted Metrics
+
+* Sharpe Ratio
+* Return-to-Risk Efficiency
+* Risk-Reward Profile
+
+
+
+## Quantitative Research Framework
+
+The platform follows a layered research architecture:
+
+```text
+Market Data
+      │
+      ▼
+Data Processing
+      │
+      ▼
+Technical Analysis Layer
+      │
+      ├── Trend Analysis
+      ├── Momentum Analysis
+      ├── Relative Strength
+      ├── Volume Analysis
+      └── Market Structure Analysis
+      │
+      ▼
+Fundamental Analysis Layer
+      │
+      ├── Valuation
+      ├── Profitability
+      ├── Growth
+      └── Financial Health
+      │
+      ▼
+Decision Engine
+      │
+      ▼
+Stock Scoring & Ranking
+      │
+      ▼
+Recommendations
+      │
+      ▼
+Backtesting & Performance Analytics
+```
+
+
+
+## Software Architecture
+
+### Data Layer
+
+* Historical Price Acquisition
+* Fundamental Data Retrieval
+* Index Constituent Management
+
+### Analytics Layer
+
+* Technical Analysis Engine
+* Fundamental Analysis Engine
+* Relative Strength Module
+* Momentum Module
+* Market Structure Analyzer
+
+### Decision Layer
+
+* Multi-Factor Scoring Engine
+* Recommendation Engine
+* Stock Ranking System
+
+### Research Layer
+
+* Backtesting Framework
+* Portfolio Simulation
+* Trade Attribution
+* Risk Analytics
+
+### Presentation Layer
+
+* Interactive Streamlit Dashboard
+* Plotly Visualizations
+* Dynamic Themes
+* CSV Export Functionality
+
+
 
 ## Tech Stack
 
-- Python
-- Streamlit
-- yfinance
-- pandas
-- Plotly
+### Financial Analytics
 
-## Project Structure
+* Technical Analysis
+* Quantitative Research
+* Factor-Based Screening
+* Strategy Backtesting
+* Risk Analytics
 
-```text
-stock_backtesting/
-  app.py
-  requirements.txt
-  nifty50.csv
-  nifty100.csv
-  nifty200.csv
-  README.md
-```
+### Technologies
 
-## Installation
+* Python
+* Streamlit
+* Pandas
+* NumPy
+* Plotly
+* Matplotlib
+* yFinance
 
-Clone the repository:
 
-```bash
-git clone https://github.com/shreya-var03/Stock-Backtesting.git
-cd Stock-Backtesting
-```
 
-Install dependencies:
+## Future Enhancements
 
-```bash
-pip install -r requirements.txt
-```
+* Portfolio Optimization
+* Multi-Asset Backtesting
+* Volatility-Adjusted Position Sizing
+* Walk-Forward Validation
+* Factor Investing Models
+* Market Regime Classification
+* Alpha Factor Research
+* Machine Learning Assisted Ranking Models
+* Portfolio Risk Attribution
+* Automated Research Report Generation
+* LLM-Based Research Assistant
 
-Run the app:
 
-```bash
-streamlit run app.py
-```
-
-## CSV Files
-
-The app uses CSV files for index constituents:
-
-- `nifty50.csv`
-- `nifty100.csv`
-- `nifty200.csv`
-
-Each file should contain at least:
-
-```csv
-Company,Symbol
-Reliance Industries Ltd.,RELIANCE
-Tata Consultancy Services Ltd.,TCS
-Infosys Ltd.,INFY
-```
-
-The app automatically adds `.NS` to NSE symbols when needed.
-
-## How To Use
-
-1. Run the Streamlit app.
-2. Choose a theme from the sidebar.
-3. Select one of the modes:
-   - Single Stock Analysis
-   - Nifty 50 Scanner
-   - Nifty 100 Scanner
-   - Nifty 200 Scanner
-4. For single stock analysis, search and select a stock.
-5. For scanners, choose 5Y or 10Y and run the scan.
-6. Review the score, signal, technical explanation, and chart.
-
-## Scoring System
-
-Each stock receives a technical score based on:
-
-- Price above 200 DMA
-- 50 DMA above 200 DMA
-- Bullish volume behavior
-- Support/resistance position
-- Relative strength vs Nifty
-- RSI momentum
-- Trend structure
-
-The final signal is shown as:
-
-- Bullish
-- Neutral / Watchlist
-- Bearish / Avoid for now
 
 ## Disclaimer
 
-This dashboard is for educational and research purposes only. It does not provide financial advice, investment recommendations, or guaranteed predictions.
+This platform is intended solely for educational, research, and quantitative experimentation purposes.
 
-Always do your own research or consult a qualified financial advisor before making investment decisions.
+It is not investment advice and should not be used as the sole basis for investment decisions.
 
-```Happy Coding!```
+```Happy Coding :)```
